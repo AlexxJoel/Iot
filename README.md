@@ -5,5 +5,6 @@ Internet Of Things
 
 First install phyton  https://www.python.org/downloads/
 
-  python -m pip install pip
-  pip install pyserial
+    python -m pip install pip
+
+    pip install pyserial
