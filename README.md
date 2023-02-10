@@ -1,7 +1,7 @@
 # Iot
 Internet Of Things
 
-##Commands to install phyton to arduino
+## Commands to install phyton to arduino
 
 First install phyton  https://www.python.org/downloads/
 
