@@ -3,9 +3,9 @@ board = serial.Serial('COM3',9600)
 
 while 1==1: 
 
-    # leemos hasta que encontarmos el final de linea
+    # Read data in console the limit is one line
     a = board.readline()
-    # Mostramos el valor leido y eliminamos el salto de linea del final
+    # Show the data 
     print ( a)
 
 board.close
