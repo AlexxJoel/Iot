@@ -1,28 +1,32 @@
-// Ultrasonic variables
-const int dEcho = 2;
-const int dTrigger = 3;
-long time, distance;
+byte BTN1 = 2;
+byte dato;
+boolean btn1; 
 
-void setup()
-{
+
+void setup() {
+  pinMode(BTN1,INPUT);
   Serial.begin(9600);
-  pinMode(dTrigger, OUTPUT);
-  pinMode(dEcho, INPUT);
-  digitalWrite(dTrigger, LOW);
 }
 
-void loop()
-{
+void loop() {
 
-  digitalWrite(dTrigger, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(dTrigger, LOW);
+  if (digitalRead(BTN1) == 1) {
+    if(!btn1){
+      btn1 = true;
+    }else{
+      btn1 = false;
+    }
+  }
+  delay(400);
 
-  time = pulseIn(dEcho, HIGH);
-  distance = (time / 59);
+  if (btn1) {
+    dato = 2; 
+  }else{
+    dato = 0;
+  }
 
-  Serial.println("Distance -> " + String(distance) + " cm ");
+  Serial.println(dato);
+  Serial.println(btn1);
 
-  delay(1500);
+
 }
-
