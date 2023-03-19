@@ -28,7 +28,16 @@ Activamos Multiconexiones
 `AT+CIPMUX=1`
 
 Abrir puerto
-`AT+CIPSERVER =1,80`
+`AT+CIPSERVER=1,80`
+
+Conectarse al servidor 
+`AT+CIPSTART=0,"TCP","IP",PORT`
+
+Enviar datos al servidor
+`AT+CIPSEND=0,4 NUMERO_DE_CARACTERES_PARA_ENVIAR`
+
+Esperamos el signo _>_ para ingresar la palabra
+`>Joel`
 
 
 Referencia: 
